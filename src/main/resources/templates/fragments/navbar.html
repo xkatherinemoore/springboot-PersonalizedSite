@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Site Navbar</title>
+</head>
+<body>
+    <div th:fragment="navbar">
+    <header>
+        <div class="px-3 py-2 text-bg-dark border-bottom">
+          <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+              <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                <i class="bi bi-code-slash me-2" width="40" height="32" role="img"></i>
+              </a>
+    
+              <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                <li>
+                  <a th:href="@{/index.html}" class="nav-link text-secondary">
+                    <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"></use></svg>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a th:href="@{/projects.html}" class="nav-link text-white">
+                    <i class="bi bi-folder2 d-block mx-auto mb-1" width="24" height="24"></i>
+                    Projects
+                  </a>
+                </li>
+                <li>
+                    <a th:href="@{/contact.html}" class="nav-link text-white">
+                        <i class="bi bi-envelope d-block mx-auto mb-1" width="24" height="24"></i>
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{https://github.com/xkatherinemoore}" class="nav-link text-white">
+                        <i class="bi bi-github d-block mx-auto mb-1" width="24" height="24"></i>
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{https://www.linkedin.com/in/katherine-moore2/}" class="nav-link text-white">
+                        <i class="bi bi-linkedin d-block mx-auto mb-1" width="24" height="24"></i>
+                        LinkedIn
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+</body>
+</html>
