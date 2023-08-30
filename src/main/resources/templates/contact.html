@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>Katherine Moore | Contact</title>
     <div th:replace="/fragments/links :: head-style"></div>
 </head>
+
 <body>
     <div th:replace="/fragments/navbar :: navbar"></div>
-
+    <h1>Get in Touch</h1>
+    <form action="#" th:action="@{/contact}" th:object="${contactInfo}" method="post">
+        <div class="mb-3">
+            <label for="inputName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="inputName" th:field="*{name}">
+        </div>
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="inputEmail" th:field="*{email}">
+        </div>
+        <div class="mb-3">
+            <label for="inputPhone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="inputPhone" th:field="*{phone}">
+        </div>
+        <div class="mb-3">
+            <label for="inputMessage" class="form-label">Message</label>
+            <textarea class="form-control" id="inputMessage" th:field="*{message}"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
     <div th:replace="/fragments/links :: body-links"></div>
 </body>
+
 </html>
